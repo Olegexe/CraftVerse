@@ -42,6 +42,47 @@ h3 {
     padding: 0 15px;
 }
 
+.button {
+    background: $color-primary-accent;
+    font-family: $default-font;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #111029;
+    padding: 16px 40px;
+    border-radius: 12px;
+}
+
+.subscription-form {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3px 0 24px;
+    &__input-wrap {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    &__input-icon {
+        margin-right: 12px;
+    }
+
+    &__input {
+        height: 64px;
+        background: transparent;
+        border: none;
+        color: rgba(255, 255, 255, 0.4);
+
+        &::placeholder {
+            font-family: $default-font;
+        }
+    }
+}
+
 .logo {
     pointer-events: none;
     max-width: 135px;
@@ -71,5 +112,23 @@ h3 {
         font-size: 12px;
         letter-spacing: 0.2em;
         text-transform: uppercase;
+    }
+}
+
+.homepage {
+    background: url("../img/header-illustration.png") no-repeat;
+    background-position: right -25px;
+
+    &__body {
+        padding: 121px 0;
+    }
+
+    &__text {
+        max-width: 600px;
+    }
+
+    &__title,
+    &__desc {
+        margin-bottom: 40px;
     }
 }

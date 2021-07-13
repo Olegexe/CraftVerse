@@ -19,4 +19,19 @@ html
                             li.header__menu-item
                                 a(class="header__menu-link" href="#")="About us"
             main.main
+                section.homepage
+                    .container
+                        .homepage__body
+                            .homepage__text
+                                h1.homepage__title="Welcome"
+                                    br
+                                    !="to Craftverse"
+                                p.homepage__desc="Craftverse is an online community for cosplayers to share, learn, and connect. It’s a first of its kind community for cosplayers and crafters to exchange secrets, make a name for themselves, and explore business opportunities."
+                                form(class="homepage__form subscription-form")
+                                    .subscription-form__input-wrap
+                                        .subscription-form__input-icon
+                                            img(src="/assets/img/email.svg", alt="email")
+                                        input(class="subscription-form__input" type="email" placeholder="Email")
+                                    button(class="subscription-form__button button")="Get Early Access"
+                            
             footer.footer
