@@ -1,5 +1,6 @@
 html
     head
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet")
@@ -33,5 +34,74 @@ html
                                             img(src="/assets/img/email.svg", alt="email")
                                         input(class="subscription-form__input" type="email" placeholder="Email")
                                     button(class="subscription-form__button button")="Get Early Access"
-                            
+                section.engage
+                    .container
+                        .engage__body
+                            .engage__text
+                                h3.engage__title="Engage in the community"
+                                p.engage__desc="Our mission at Craftverse is to give cosplay professionals and enthusiasts alike a space to showcase their craft, inspire, explore lucrative opportunities, and unlock their potential ina safe industry-friendly environment."
+                            .engade__frame
+                                .engage__frame-tabs
+                                    input(type="radio", name="tab", id="tab-1", value="", checked)
+                                    label(class="engage__frame-tab" for="tab-1")="Portfolio"     
+                                    input(type="radio", name="tab", id="tab-2", value="")
+                                    label(class="engage__frame-tab" for="tab-2")="Home Page"
+
+                                    div(class="engage__tab-content" id="tab-content-1")
+                                        .frame
+                                            .frame__header
+                                                ul.frame__header-dots
+                                                    li.frame__header-dot
+                                                    li.frame__header-dot
+                                                    li.frame__header-dot
+                                            .frame__content
+                                                .frame__content-header
+                                                    .frame__content-logo
+                                                        img(src="/assets/img/logo.svg", alt="logo")
+                                                    .frame__content-menu
+                                                        ul.frame__menu-list
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="activity"
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="learning"
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="marketplace"
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="jobs"
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="blogs"
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="events"
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="guides"
+                                                    .frame__content-actions
+                                                        button(class="frame__content-btn button button_borderless button_small")="Log in"
+                                                .frame__content-body
+                                                    .frame__profile
+                                                        .frame__profile-avatar-wrap
+                                                            .frame__profile-avatar
+                                                                img(src="/assets/img/avatar.jpg", alt="avatar")
+                                                            span.frame__profile-tag="PRO"
+                                                        h4.frame__profile-name="Elynia Cosplay"
+                                                    ul.frame__content-tabs
+                                                        li(class="frame__content-tab frame__content-tab_active")="Portfolio"
+                                                        li(class="frame__content-tab")="blog"
+                                                        li(class="frame__content-tab")="video"
+                                                        li(class="frame__content-tab")="Store"
+                                                        li(class="frame__content-tab")="following"
+                                                        li(class="frame__content-tab")="followers"
+                                                    .frame__tab-content
+                                                        ul.frame__works-list
+                                                            li.frame__works-item
+                                                                img(src="/assets/img/portfolio1.jpg", alt="portfolio_item")
+                                                            li.frame__works-item
+                                                                img(src="/assets/img/portfolio2.jpg", alt="portfolio_item")
+                                                            li.frame__works-item
+                                                                img(src="/assets/img/portfolio3.jpg", alt="portfolio_item")
+
+
+                                    div(class="engage__tab-content" id="tab-content-2")   
+                        .background-circles
+                            .background-circles_first
+                            .background-circles_second
             footer.footer
