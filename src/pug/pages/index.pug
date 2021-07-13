@@ -4,6 +4,7 @@ html
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous")
         title="Craftverse"
     body
         .wrapper
@@ -24,22 +25,24 @@ html
             main.main
                 section.homepage
                     .container
-                        .homepage__body
-                            div(class="homepage__text" data-aos="fade-right")
-                                h1.homepage__title="Welcome"
-                                    br
-                                    !="to Craftverse"
-                                p.homepage__desc="Craftverse is an online community for cosplayers to share, learn, and connect. It’s a first of its kind community for cosplayers and crafters to exchange secrets, make a name for themselves, and explore business opportunities."
-                                form(class="homepage__form subscription-form")
-                                    .subscription-form__input-wrap
+                        div(class="homepage__body")
+                            div(class="homepage__text")
+                                h1(class="homepage__title")
+                                    span(data-aos="custom-slide-right")="Welcome"
+                                    span(data-aos="custom-slide-right" data-aos-delay="100")="to Craftverse"
+                                p(class="homepage__desc" data-aos="custom-slide-right" data-aos-delay="200")="Craftverse is an online community for cosplayers to share, learn, and connect. It’s a first of its kind community for cosplayers and crafters to exchange secrets, make a name for themselves, and explore business opportunities."
+                                form(class="homepage__form subscription-form" data-aos="custom-slide-right" data-aos-delay="400")
+                                    div(class="subscription-form__input-wrap")
                                         .subscription-form__input-icon
-                                            img(src="/assets/img/email.svg", alt="email")
+                                            span.icon-email
                                         input(class="subscription-form__input" type="email" placeholder="Email")
-                                    button(class="subscription-form__button button")="Get Early Access"
+                                    input(class="subscription-form__button button" type="submit" value="Get Early Access"  data-aos="custom-slide-right" data-aos-delay="500")
+                            div(class="homepage__image"  data-aos="custom-slide-left")
+                                img(src="/assets/img/header-illustration.png", alt="header-illustration")
                 section.engage
                     .container
                         .engage__body
-                            .engage__text
+                            div(class="engage__text" data-aos="fade-up")
                                 h3.engage__title="Engage in the community"
                                 p.engage__desc="Our mission at Craftverse is to give cosplay professionals and enthusiasts alike a space to showcase their craft, inspire, explore lucrative opportunities, and unlock their potential ina safe industry-friendly environment."
                             div(class="engade__frame frame")
@@ -94,11 +97,11 @@ html
                                                         li(class="frame__content-tab")="followers"
                                                     .frame__tab-content
                                                         ul.frame__works-list
-                                                            li.frame__works-item
+                                                            li(class="frame__works-item" data-aos="height-increase" data-delay="100")
                                                                 img(src="/assets/img/portfolio1.jpg", alt="portfolio_item")
-                                                            li.frame__works-item
+                                                            li(class="frame__works-item" data-aos="height-increase" data-aos-delay="300")
                                                                 img(src="/assets/img/portfolio2.jpg", alt="portfolio_item")
-                                                            li.frame__works-item
+                                                            li(class="frame__works-item" data-aos="height-increase" data-aos-delay="500")
                                                                 img(src="/assets/img/portfolio3.jpg", alt="portfolio_item")
 
 
@@ -114,14 +117,14 @@ html
                                 p.about__desc="CraftVerse is a home for cosplay enthusiasts. Gone are the days of fragmented online cosplay groups. Together we will create a welcoming environment where you can share your latest creations and projects."
                                 button(class="about__button button button_borderless")="Get Early Access"
                             .about__image
-                                img(src="/assets/img/about1.png", alt="about_illustration")
+                                img(src="/assets/img/about1.png", alt="about_illustration" data-aos="zoom-in-left")
                         .about__row
                             .about__text
                                 h3.about__title="Grow Your Knowledge"
                                 p.about__desc="What’s your goal? Blacksmithing? 3D Printing? Painting? From sowing to foam work, we’ll work with industry leaders to help you learn the latest cosplay secrets and techniques."
                                 button(class="about__button button button_borderless")="Get Early Access"
                             .about__image
-                                img(src="/assets/img/about2.png", alt="about_illustration")
+                                img(src="/assets/img/about2.png", alt="about_illustration"  data-aos="zoom-in-right")
                 section.jobs-and-hires
                     .container
                         .jobs-and-hires__body
@@ -242,12 +245,12 @@ html
                                 img(src="/assets/img/kickstarter.png", alt="kickstarter-icon")
                             h3.kickstarter__title="Kickstarter Campain"
                             p.kickstareter__text="To help realize our dream, we are asking the worldwide cosplay community to help us fund this incredible undertaking. In Spring 2021 we will officially launch a Kickstarter Campaign to secure funding and speed up the launch of this new platform. If you're interested in supporting our kickstarter or gaining early access to the platform, please sign up with your email below."
-                            form(class="kickstarter__form subscription-form")
+                            form(class="kickstarter__form subscription-form" data-aos="crossing" data-aos-delay="100")
                                     .subscription-form__input-wrap
                                         .subscription-form__input-icon
-                                            img(src="/assets/img/email.svg", alt="email")
+                                            span.icon-email
                                         input(class="subscription-form__input" type="email" placeholder="Email")
-                                    button(class="subscription-form__button button")="Join List & Get Early Access"
+                                    input(class="subscription-form__button button" type="submit" value="Join List & Get Early Access")
             footer.footer
                 .container
                     .footer__body
@@ -267,14 +270,11 @@ html
                         .footer__social
                             ul.footer__social-list
                                 li.footer__social-item
-                                    a(class="footer__social-link" href="#")
-                                        img(src="/assets/img/twitter.svg", alt="twitter") 
+                                    a(class="footer__social-link icon-twitter" href="#")
                                 li.footer__social-item
-                                    a(class="footer__social-link" href="#")
-                                        img(src="/assets/img/facebook.svg", alt="facebook") 
+                                    a(class="footer__social-link icon-facebook" href="#")
                                 li.footer__social-item
-                                    a(class="footer__social-link" href="#")
-                                        img(src="/assets/img/instagram.svg", alt="instagram") 
+                                    a(class="footer__social-link icon-Instagram" href="#")
                                 li.footer__social-item
-                                    a(class="footer__social-link" href="#")
-                                        img(src="/assets/img/book.svg", alt="book") 
+                                    a(class="footer__social-link icon-book" href="#")
+                                        
