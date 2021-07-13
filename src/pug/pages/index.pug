@@ -1,3 +1,22 @@
 html
-    head 
+    head
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet")
+        title="Craftverse"
     body
+        .wrapper
+            header.header
+                .header__body
+                    .logo
+                        img(src="/assets/img/logo.svg", alt="logo")
+                    nav.header__menu
+                        ul.header__menu-list
+                            li.header__menu-item
+                                a(class="header__menu-link" href="#")="Blog"
+                            li.header__menu-item
+                                a(class="header__menu-link" href="#")="FAQ"
+                            li.header__menu-item
+                                a(class="header__menu-link" href="#")="About us"
+            main.main
+            footer.footer

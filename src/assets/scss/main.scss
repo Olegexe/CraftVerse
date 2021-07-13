@@ -1,13 +1,75 @@
-@import './utils/fonts.scss';
-@import './utils/vars.scss';
-@import './utils/reset.scss';
-@import './utils/mixins.scss';
+@import "./utils/fonts.scss";
+@import "./utils/vars.scss";
+@import "./utils/reset.scss";
+@import "./utils/mixins.scss";
 
 body {
+    color: #fff;
+    background-color: $color-bacgkround;
+    font-family: $default-font;
+    font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 32px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $default-font;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 100px;
+}
+
+h2 {
+    font-size: 48px;
+    line-height: 60px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 800;
 }
 
 .container {
-    max-width: fit-content;
+    max-width: $containerWidth;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo {
+    pointer-events: none;
+    max-width: 135px;
+}
+
+.header {
+    width: 100%;
+    max-height: 96px;
+
+    &__body {
+        padding: 32px 44px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__menu-list {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    &__menu-link {
+        color: #fff;
+        font-family: $default-font;
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
 }
