@@ -8,22 +8,24 @@ html
     body
         .wrapper
             header.header
-                .header__body
-                    .logo
-                        img(src="/assets/img/logo.svg", alt="logo")
-                    nav.header__menu
-                        ul.header__menu-list
-                            li.header__menu-item
-                                a(class="header__menu-link" href="#")="Blog"
-                            li.header__menu-item
-                                a(class="header__menu-link" href="#")="FAQ"
-                            li.header__menu-item
-                                a(class="header__menu-link" href="#")="About us"
+                div(class="container container_large")
+                    .header__body
+                        .logo
+                            a(href="/") 
+                                img(src="/assets/img/logo.svg", alt="logo")
+                        nav.header__menu
+                            ul.header__menu-list
+                                li.header__menu-item
+                                    a(class="header__menu-link" href="#")="Blog"
+                                li.header__menu-item
+                                    a(class="header__menu-link" href="#")="FAQ"
+                                li.header__menu-item
+                                    a(class="header__menu-link" href="#")="About us"
             main.main
                 section.homepage
                     .container
                         .homepage__body
-                            .homepage__text
+                            div(class="homepage__text" data-aos="fade-right")
                                 h1.homepage__title="Welcome"
                                     br
                                     !="to Craftverse"
@@ -40,15 +42,15 @@ html
                             .engage__text
                                 h3.engage__title="Engage in the community"
                                 p.engage__desc="Our mission at Craftverse is to give cosplay professionals and enthusiasts alike a space to showcase their craft, inspire, explore lucrative opportunities, and unlock their potential ina safe industry-friendly environment."
-                            .engade__frame
-                                .engage__frame-tabs
+                            div(class="engade__frame frame")
+                                .frame__tabs
                                     input(type="radio", name="tab", id="tab-1", value="", checked)
-                                    label(class="engage__frame-tab" for="tab-1")="Portfolio"     
+                                    label(class="frame__tab" for="tab-1")="Portfolio"     
                                     input(type="radio", name="tab", id="tab-2", value="")
-                                    label(class="engage__frame-tab" for="tab-2")="Home Page"
+                                    label(class="frame__tab" for="tab-2")="Home Page"
 
-                                    div(class="engage__tab-content" id="tab-content-1")
-                                        .frame
+                                    div(class="frame__tab-content" id="tab-content-1")
+                                        .frame__body
                                             .frame__header
                                                 ul.frame__header-dots
                                                     li.frame__header-dot
@@ -100,8 +102,179 @@ html
                                                                 img(src="/assets/img/portfolio3.jpg", alt="portfolio_item")
 
 
-                                    div(class="engage__tab-content" id="tab-content-2")   
+                                    div(class="frame__tab-content" id="tab-content-2")   
                         .background-circles
-                            .background-circles_first
-                            .background-circles_second
+                            div(class="background-circles_first" data-aos="zoom-in")
+                            duv(class="background-circles_second" data-aos="zoom-in")
+                section.about
+                    div(class="container container_large")
+                        .about__row
+                            .about__text
+                                h3.about__title="Express yourself"
+                                p.about__desc="CraftVerse is a home for cosplay enthusiasts. Gone are the days of fragmented online cosplay groups. Together we will create a welcoming environment where you can share your latest creations and projects."
+                                button(class="about__button button button_borderless")="Get Early Access"
+                            .about__image
+                                img(src="/assets/img/about1.png", alt="about_illustration")
+                        .about__row
+                            .about__text
+                                h3.about__title="Grow Your Knowledge"
+                                p.about__desc="What’s your goal? Blacksmithing? 3D Printing? Painting? From sowing to foam work, we’ll work with industry leaders to help you learn the latest cosplay secrets and techniques."
+                                button(class="about__button button button_borderless")="Get Early Access"
+                            .about__image
+                                img(src="/assets/img/about2.png", alt="about_illustration")
+                section.jobs-and-hires
+                    .container
+                        .jobs-and-hires__body
+                            .jobs-and-hires__text
+                                h3.jobs-and-hires__title
+                                    !="Have Fun"
+                                    br
+                                    !="Make Money."
+                                p.jobs-and-hires__desc="Craftverse will empower you to sell digital and physical products to the worldwide cosplay community. Together we will connect, makers, brands, and events to the vast world of cosplay and crafting."
+                            div(class="jobs-and-hires__frame frame")
+                                .frame__tabs
+                                    input(type="radio", name="tab", id="tab-2-1", value="", checked)
+                                    label(class="frame__tab" for="tab-2-1")="Jobs & Hires"     
+                                    input(type="radio", name="tab", id="tab-2-2", value="")
+                                    label(class="frame__tab" for="tab-2-2")="Marketplace"
+
+                                    div(class="frame__tab-content" id="tab-content-2-1")
+                                        .frame__body
+                                            .frame__header
+                                                ul.frame__header-dots
+                                                    li.frame__header-dot
+                                                    li.frame__header-dot
+                                                    li.frame__header-dot
+                                            .frame__content
+                                                .frame__content-header
+                                                    .frame__content-logo
+                                                        img(src="/assets/img/logo.svg", alt="logo")
+                                                    .frame__content-menu
+                                                        ul.frame__menu-list
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="activity"
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="learning"
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="marketplace"
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="jobs"
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="blogs"
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="events"
+                                                            li.frame__menu-item
+                                                                a(class="frame__menu-link" href="#")="guides"
+                                                    .frame__content-actions
+                                                        button(class="frame__content-btn button button_borderless button_small")="Log in"
+                                                .frame__content-body
+                                                    .frame__section-header
+                                                        h2.frame__title="Jobs & Hires"
+                                                        div(class="frame__search-box search-box") 
+                                                            input(class="search-box__input" type="text" placeholder="Search")
+                                                            span.search-box__icon
+                                                                img(src="/assets/img/search.svg", alt="search")
+                                                        
+                                                    ul.frame__content-tabs
+                                                        li(class="frame__content-tab frame__content-tab_active")="trending"
+                                                        li(class="frame__content-tab")="Latest"
+                                                    .frame__tab-content
+                                                        ul.frame__cards-list
+                                                            li(class="frame__cards-item card")
+                                                                .card__image
+                                                                    img(src="/assets/img/card1.jpg", alt="card-img")
+                                                                .card__desc
+                                                                    .card__author="Wayne Baldwin"
+                                                                    .card__caption="Cosplay & Prop Maker"
+                                                            li(class="frame__cards-item card")
+                                                                .card__image
+                                                                    img(src="/assets/img/card2.jpg", alt="card-img")
+                                                                .card__desc
+                                                                    .card__author="Raymond Andrews"
+                                                                    .card__caption="Cosplay Photographer"
+                                                            li(class="frame__cards-item card")
+                                                                .card__image
+                                                                    img(src="/assets/img/card3.jpg", alt="card-img")
+                                                                .card__desc
+                                                                    .card__author="Cynthia Barker"
+                                                                    .card__caption="Artwork Artist"
+                                                            li(class="frame__cards-item card")
+                                                                .card__image
+                                                                    img(src="/assets/img/card4.jpg", alt="card-img")
+                                                                .card__desc
+                                                                    .card__author="Justin Barnett"
+                                                                    .card__caption="3D Printing Workshop"
+                                                            li(class="frame__cards-item card")
+                                                                .card__image
+                                                                    img(src="/assets/img/card5.jpg", alt="card-img")
+                                                                .card__desc
+                                                                    .card__author="Wayne Baldwin"
+                                                                    .card__caption="Cosplay & Prop Maker"
+                                                            li(class="frame__cards-item card")
+                                                                .card__image
+                                                                    img(src="/assets/img/card6.jpg", alt="card-img")
+                                                                .card__desc
+                                                                    .card__author="Raymond Andrews"
+                                                                    .card__caption="Cosplay Photographer"
+                                                            li(class="frame__cards-item card")
+                                                                .card__image
+                                                                    img(src="/assets/img/card7.jpg", alt="card-img")
+                                                                .card__desc
+                                                                    .card__author="Cynthia Barker"
+                                                                    .card__caption="Artwork Artist"
+                                                            li(class="frame__cards-item card")
+                                                                .card__image
+                                                                    img(src="/assets/img/card8.jpg", alt="card-img")
+                                                                .card__desc
+                                                                    .card__author="Justin Barnett"
+                                                                    .card__caption="3D Printing Workshop"
+                                                            
+
+
+                                    div(class="engage__tab-content" id="tab-content-2-2")
+                        .background-circles
+                            div(class="background-circles_first" data-aos="zoom-in")
+                            duv(class="background-circles_second" data-aos="zoom-in")
+                section.kickstarter
+                    .container
+                        .kickstarter__body
+                            .kickstarter__icon
+                                img(src="/assets/img/kickstarter.png", alt="kickstarter-icon")
+                            h3.kickstarter__title="Kickstarter Campain"
+                            p.kickstareter__text="To help realize our dream, we are asking the worldwide cosplay community to help us fund this incredible undertaking. In Spring 2021 we will officially launch a Kickstarter Campaign to secure funding and speed up the launch of this new platform. If you're interested in supporting our kickstarter or gaining early access to the platform, please sign up with your email below."
+                            form(class="kickstarter__form subscription-form")
+                                    .subscription-form__input-wrap
+                                        .subscription-form__input-icon
+                                            img(src="/assets/img/email.svg", alt="email")
+                                        input(class="subscription-form__input" type="email" placeholder="Email")
+                                    button(class="subscription-form__button button")="Join List & Get Early Access"
             footer.footer
+                .container
+                    .footer__body
+                        .footer__logo
+                            a(href="/") 
+                                img(src="/assets/img/logo.svg", alt="logo")
+                        nav.footer__menu
+                            ul.footer__list
+                                li.footer__list-item
+                                    a(class="footer__list-link" href="#")="FAQ"
+                                li.footer__list-item
+                                    a(class="footer__list-link" href="#")="Privacy Policy"
+                                li.footer__list-item
+                                    a(class="footer__list-link" href="#")="Terms of Service"
+                                li.footer__list-item
+                                    a(class="footer__list-link" href="#")="Press"
+                        .footer__social
+                            ul.footer__social-list
+                                li.footer__social-item
+                                    a(class="footer__social-link" href="#")
+                                        img(src="/assets/img/twitter.svg", alt="twitter") 
+                                li.footer__social-item
+                                    a(class="footer__social-link" href="#")
+                                        img(src="/assets/img/facebook.svg", alt="facebook") 
+                                li.footer__social-item
+                                    a(class="footer__social-link" href="#")
+                                        img(src="/assets/img/instagram.svg", alt="instagram") 
+                                li.footer__social-item
+                                    a(class="footer__social-link" href="#")
+                                        img(src="/assets/img/book.svg", alt="book") 

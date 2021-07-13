@@ -5,7 +5,7 @@
 
 body {
     color: #fff;
-    background-color: $color-bacgkround;
+    background-color: $color-background;
     font-family: $default-font;
     font-weight: 400;
     font-size: 16px;
@@ -40,6 +40,10 @@ h3 {
     max-width: $containerWidth;
     margin: 0 auto;
     padding: 0 15px;
+
+    &_large {
+        max-width: $containerWidthLarge;
+    }
 }
 
 .button {
@@ -51,6 +55,7 @@ h3 {
     color: #111029;
     padding: 16px 40px;
     border-radius: 12px;
+    cursor: pointer;
 
     &_borderless {
         background: transparent;
@@ -96,18 +101,72 @@ h3 {
     }
 }
 
+.search-box {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    width: 272px;
+
+    &__input {
+        background: transparent;
+        border: none;
+        padding: 4px 12px;
+        font-size: 12px;
+        line-height: 24px;
+        flex-grow: 1;
+        font-family: $default-font;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        margin-right: 12px;
+    }
+}
+
 .logo {
-    pointer-events: none;
     max-width: 135px;
 }
 
 .frame {
-    width: 100%;
-    height: 682px;
-    border: 1.5px solid rgba(255, 255, 255, 0.06);
-    border-radius: 8px;
-    backdrop-filter: blur(240px);
-    overflow: hidden;
+    &__tabs {
+        margin-bottom: 16px;
+
+        & > input[type="radio"] {
+            display: none;
+        }
+
+        & #tab-1:checked ~ #tab-content-1,
+        & #tab-2:checked ~ #tab-content-2,
+        & #tab-2-1:checked ~ #tab-content-2-1,
+        & #tab-2-2:checked ~ #tab-content-2-2 {
+            display: block;
+        }
+
+        & #tab-1:checked + .frame__tab,
+        & #tab-2:checked + .frame__tab,
+        & #tab-2-1:checked + .frame__tab,
+        & #tab-2-2:checked + .frame__tab {
+            color: #fff;
+        }
+    }
+
+    &__tab {
+        display: inline-block;
+        margin: 0 24px 15px 0;
+        color: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+    }
+
+    &__tab-content {
+        display: none;
+    }
+    &__body {
+        width: 100%;
+        height: 682px;
+        border: 1.5px solid rgba(255, 255, 255, 0.06);
+        border-radius: 8px;
+        backdrop-filter: blur(240px);
+        overflow: hidden;
+    }
 
     &__header {
         background: rgba(255, 255, 255, 0.06);
@@ -245,6 +304,54 @@ h3 {
         border-radius: 8px;
         overflow: hidden;
     }
+
+    &__section-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+
+        margin-bottom: 40px;
+    }
+
+    &__cards-list {
+        display: flex;
+        column-gap: 16px;
+        row-gap: 34px;
+        flex-wrap: wrap;
+    }
+
+    &__cards-item {
+        flex-basis: calc(25% - 12px);
+    }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    position: relative;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    &__desc {
+        padding: 15px 16px;
+    }
+
+    &__author {
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 2px;
+    }
+
+    &__caption {
+        color: $color-primary-accent;
+        font-size: 10px;
+        line-height: 13px;
+    }
 }
 
 .background-circles {
@@ -284,7 +391,7 @@ h3 {
     max-height: 96px;
 
     &__body {
-        padding: 32px 44px;
+        padding: 32px 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -325,6 +432,7 @@ h3 {
 }
 .engage {
     padding: 40px 0;
+    margin-bottom: 100px;
     position: relative;
 
     &__body {
@@ -346,32 +454,138 @@ h3 {
     &__desc {
         flex-grow: 1;
     }
-    &__frame-tabs {
-        margin-bottom: 16px;
+}
+.about {
+    margin-bottom: 160px;
 
-        & > input[type="radio"] {
-            display: none;
+    &__row:last-child {
+        flex-direction: row-reverse;
+
+        .about__text {
+            margin-left: 0;
+            margin-right: 136px;
+            padding: 309px 0;
+        }
+    }
+    &__row {
+        display: flex;
+        gap: 24px;
+    }
+    &__text {
+        padding: 308px 0;
+        margin-left: 136px;
+        max-width: 520px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        flex-shrink: 0;
+    }
+
+    &__desc {
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    &__button {
+        padding: 20px 40px;
+        align-self: flex-start;
+    }
+}
+
+.jobs-and-hires {
+    position: relative;
+    margin-bottom: 160px;
+    overflow: hidden;
+
+    & .background-circles {
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+
+        &_first {
+            max-width: 436px;
+            max-height: 436px;
+            top: 180px;
         }
 
-        & #tab-1:checked ~ #tab-content-1,
-        & #tab-2:checked ~ #tab-content-2 {
-            display: block;
-        }
-
-        & #tab-1:checked + .engage__frame-tab,
-        & #tab-2:checked + .engage__frame-tab {
-            color: #fff;
+        &_second {
+            max-width: 325px;
+            max-height: 325px;
+            top: 500px;
+            right: 25px;
         }
     }
 
-    &__frame-tab {
-        display: inline-block;
-        margin: 0 24px 15px 0;
-        color: rgba(255, 255, 255, 0.3);
-        cursor: pointer;
+    &__body {
+        position: relative;
+        z-index: 10;
     }
 
-    &__tab-content {
-        display: none;
+    &__text {
+        display: flex;
+        gap: 160px;
+        margin-bottom: 80px;
+    }
+
+    &__title {
+        flex-basis: 520px;
+        flex-shrink: 0;
+    }
+}
+
+.kickstarter {
+    margin-bottom: 160px;
+
+    &__body {
+        background: #222040;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 80px 264px;
+        text-align: center;
+    }
+
+    &__form {
+        width: 74%;
+    }
+}
+
+.footer {
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-bottom: 40px;
+    }
+
+    &__menu {
+        margin-bottom: 24px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    &__list-link {
+        color: rgba(255, 255, 255, 0.1);
+    }
+
+    &__social-list {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &__social-item {
+        @include size(48px);
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
